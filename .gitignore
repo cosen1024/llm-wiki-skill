@@ -1,0 +1,16 @@
+# Ignore standard test vaults and local OS files
+.DS_Store
+Thumbs.db
+
+# Ignore actual wiki content if you use this repo as a template
+# But for the skill itself, we keep the directory empty
+**/raw/*
+!**/raw/.gitkeep
+**/wiki/*
+!**/wiki/.gitkeep
+**/output/*
+!**/output/.gitkeep
+
+# Accio/Claude local files
+.accio/
+.claude/
