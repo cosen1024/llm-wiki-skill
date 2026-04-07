@@ -3,20 +3,19 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
-[中文版](#-为什么选择它) | [English Version](#-why-this)
+[中文文档](#-为什么选择它) | [English Document](#-why-this)
 
 ---
 
 ## 🚀 为什么选择它？
 
-**这不是 RAG。**
-传统的 RAG（检索增强生成）在你提问时，临时从文档中抓取信息。它没有记忆，也没有积淀。
+**源自大神 Andrej Karpathy 的“第二大脑”构想。**
 
-**LLM Wiki 是“知识编译”。**
-就像程序员将源代码编译成二进制文件一样，LLM 只需读取一次原始资料，并将其“编译”成一个结构化、互联的 Markdown 维基百科。
-- **复利效应**：每增加一个来源，维基都会变得更丰富。
-- **上下文感知**：LLM 能够理解不同资料之间的“联系”。
-- **持久化**：知识存储在你的本地文件中，而不是隐藏的向量数据库中。
+传统的 RAG（检索增强生成）只是“临时搬运工”，在你提问时临时抓取片段，没有积淀。而 Karpathy 提倡的 **LLM Wiki** 模式则是 **“知识编译器”**。
+
+本项目将这一顶级思维转化为 **AI 原生技能 (AI-Native Skill)**：
+- **大神理念**：摒弃复杂的向量数据库，让 LLM 像程序员维护代码库一样，持久化地维护你的 Markdown 维基。每一次摄取都是在织入知识，每一次查询都是在复利。
+- **AI 原生实现**：这不仅是一个软件，更是一份**“大脑指令集”**。无需 Node/Python 环境，直接利用 Claude Code/Accio 的原生文件操作能力，实现最轻量、最智能的知识管理。
 
 > “Obsidian 是 IDE，LLM 是程序员，Wiki 则是代码库。”
 
@@ -49,98 +48,54 @@ vault/
 | `wiki query` | 基于已有的维基知识库提问，并生成可回流的产物。 |
 | `lint wiki` | 健康检查：发现知识盲区、矛盾点和孤儿页面。 |
 
-## 📦 安装 (Installation)
+## 📦 安装与使用 (Installation & Usage)
 
-由于此项目已“插件化”，你可以直接通过以下指令安装：
+你可以通过以下两种方式将此技能赋予你的 AI：
 
+### 模式 A：插件安装 (推荐)
+适用于 Claude Code/Accio 用户，一键集成到你的指令集：
 ```bash
 /plugin marketplace add cosen1024/llm-wiki-skill
 /plugin install llm-wiki-skill@cosen1024/llm-wiki-skill
 ```
+
+### 模式 B：技能加载 (手动)
+如果你不希望安装插件，可以手动克隆仓库，并让 AI 直接读取 `skills/llm-wiki.md` 的内容。
 
 ---
 
 ## 🚀 Why this?
 
-**This is NOT RAG.** 
-Standard RAG (Retrieval-Augmented Generation) re-derives knowledge from raw documents every time you ask a question. It has no memory and no accumulation. 
+**Inspired by Andrej Karpathy's "Second Brain" Vision.**
 
-**LLM Wiki compiles knowledge.**
-Like a programmer compiling source code into a binary, the LLM reads your raw materials once and "compiles" them into a structured, interlinked Markdown Wiki. 
-- **Accumulation**: Every source added makes the wiki richer.
-- **Context**: The LLM understands the *connections* between different sources.
-- **Persistence**: Knowledge lives in your local files, not in a hidden vector database.
+Standard RAG is just a "temporary courier" — it fetches fragments when you ask, but has no memory or accumulation. Karpathy's **LLM Wiki** pattern is a **"Knowledge Compiler"**.
 
-> "Obsidian is the IDE. The LLM is the programmer. The wiki is the codebase."
-
-## 📂 Architecture
-
-![LLM Wiki Architecture](https://images.javalearn.cn/blog/2026/04/ca4ced3ee79e5d70344731a61d1d7968.png)
-
-```text
-vault/
-├── raw/              # IMMUTABLE. Raw PDFs, articles, notes. LLM reads only.
-├── wiki/             # LLM-OWNED. The compiled knowledge.
-│   ├── CLAUDE.md         # ★ The Schema: Domain-specific rules and workflows.
-│   ├── index.md          # Navigation map for the LLM.
-│   ├── log.md            # Append-only operation history.
-│   ├── overview.md       # High-level synthesis of everything.
-│   ├── sources/          # Summaries linked back to raw files.
-│   ├── concepts/         # Deep dives into specific topics.
-│   └── entities/         # People, tools, and organizations.
-└── output/           # Valuable results (reports, slides) that flow back to Wiki.
-```
-
-## 🛠️ Operations
-
-![LLM Wiki Workflow](https://images.javalearn.cn/blog/2026/04/3a9c6c9b036cd38b527dc4bf9ee87dbc.png)
-
-| Command | Action |
-|---|---|
-| `build wiki` | Initialize the structure and co-evolve the `CLAUDE.md` schema. |
-| `ingest this` | Process a raw source and weave it into the wiki fabric. |
-| `wiki query` | Ask questions and generate "flowback" artifacts. |
-| `lint wiki` | Perform a health check: find gaps, contradictions, and orphans. |
-
-## 📦 安装 (Installation)
-
-```bash
-/plugin marketplace add cosen1024/llm-wiki-skill
-/plugin install llm-wiki-skill@cosen1024/llm-wiki-skill
-```
+This project transforms that high-level vision into an **AI-Native Skill**:
+- **The Vision**: Move away from complex vector databases. Let the LLM maintain a persistent, interlinked Markdown Wiki as if it were maintaining a codebase. Every ingestion is an integration; every query is a compounding interest.
+- **AI-Native Implementation**: This is not just software; it's an **"Instruction Set for the Brain."** It leverages the native file-op capabilities of Claude Code/Accio directly, making it the most lightweight and intelligent way to manage knowledge.
 
 ## 📖 Usage Guide
 
-After installation, you don't need to memorize rigid commands. Just interact with the AI using **natural language**.
+After enabling the skill, interact with the AI using **natural language**:
 
 ### 1. Three-Step Quick Start
-1.  **Initialize**: Tell the AI, "Build a knowledge base for [Your Domain]." It will automatically create the `raw/`, `wiki/`, and `output/` directories.
-2.  **Feed Sources**: Drop your PDFs, articles, or notes into the `raw/` folder (or paste the content directly into the chat).
-3.  **Ingest Knowledge**: Tell the AI, "Ingest new materials" or "Process the contents in the raw folder." The AI will begin the "compilation" process.
+1.  **Initialize**: "Build a knowledge base for [Your Domain]."
+2.  **Feed Sources**: Drop PDFs/articles into the `raw/` folder.
+3.  **Ingest Knowledge**: "Ingest new materials and update the wiki."
 
 ### 2. Example Prompts
-*   **Startup**: "Build a research wiki for 'Deep Learning Crack Detection'."
-*   **Ingest**: "Ingest the 3 new papers I just added to the raw folder and update the index."
-*   **Deep Query**: "Based on the wiki, compare Algorithm A vs. Algorithm B in a table format."
-*   **Maintenance**: "Lint my wiki to find contradictions or orphan concepts that lack links."
+*   "Build a research wiki for 'Deep Learning Crack Detection'."
+*   "Ingest the 3 new papers in the raw folder and update the index."
+*   "Compare Algorithm A vs. Algorithm B in a table format based on the wiki."
+*   "Lint my wiki to find contradictions or orphan concepts."
 
 ### 3. The Magic: Flowback
-When you ask a great question and the AI provides a brilliant analysis report, simply say:
+When the AI provides a brilliant analysis, simply say:
 > "File this analysis back into the wiki's comparisons directory."
-
-The AI will save it as a persistent Markdown page, allowing your knowledge base to compound with every conversation.
 
 ---
 
-## 🌟 Best Practices
-
-- **Flowback is magic**: Always file valuable query results back into the wiki.
-- **Just dump into raw/**: Don't worry about organization; let the LLM handle the structure.
-- **Use Obsidian**: Use it as your viewer. The LLM writes, you browse.
-
 ## 🤝 Credits
-
-![Karpathy's Vision](https://images.javalearn.cn/blog/2026/04/eeea3ed3aeb2783bbf055dcfc81d164b.png)
 
 Inspired by [Andrej Karpathy's LLM Wiki concept](https://karpathy.ai/blog/wiki.html).
 
