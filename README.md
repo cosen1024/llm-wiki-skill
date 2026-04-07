@@ -15,7 +15,7 @@
 
 相比于其他的 CLI 命令行工具或简单的 RAG 插件，本项目的优势在于：
 
-1.  **AI 原生实现 (AI-Native)**：无需安装 Node/Python 环境。它不是死板的代码逻辑，而是直接注入 AI 的**“大脑指令集”**，利用 Claude Code 的原生推理能力处理复杂的文件合并与冲突。
+1.  **AI 原生实现 (AI-Native)**：无需安装 Node/Python 环境。它不是死板的代码逻辑，而是直接注入 AI 的“大脑指令集”，利用 AI 的原生推理能力处理复杂的文件合并与冲突。
 2.  **科学的层级架构**：不同于其他项目平铺直叙的“乱炖”结构，我们采用了 **“来源-概念-实体”** 的层级化设计，更适合长期的知识沉淀与高精度检索。
 3.  **核心回流机制 (Flowback)**：这不仅是资料的“摄取器”，更是知识的“生成器”。它强调将对话中产生的深度分析报告**自动归档**回 Wiki，实现知识的闭合复利。
 4.  **共进化的 Schema**：通过 `CLAUDE.md` 规范，Wiki 会“教”AI 如何管理它。你可以随时通过自然语言调整规范，而无需重写任何代码。
@@ -103,6 +103,11 @@ When the AI provides a brilliant analysis, simply say:
 ## 🤝 Credits
 
 Inspired by [Andrej Karpathy's LLM Wiki concept](https://karpathy.ai/blog/wiki.html).
+
+## 📄 License
+
+MIT
+tml).
 
 ## 📄 License
 
