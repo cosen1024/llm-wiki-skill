@@ -1,16 +1,23 @@
 {
-  "id": "llm-wiki-skill",
-  "name": "LLM Wiki Skill",
-  "version": "1.0.0",
-  "description": "Build and maintain LLM-powered personal knowledge bases using the Karpathy Wiki pattern. Compiles raw sources into a persistent, interlinked markdown wiki, not RAG.",
-  "author": "cosen1024",
-  "repository": "https://github.com/cosen1024/llm-wiki-skill",
-  "skills": [
+  "name": "llm-wiki-skill",
+  "owner": {
+    "name": "cosen1024",
+    "url": "https://github.com/cosen1024"
+  },
+  "metadata": {
+    "description": "Build and maintain LLM-powered personal knowledge bases using the Karpathy Wiki pattern.",
+    "version": "1.0.0"
+  },
+  "plugins": [
     {
-      "id": "llm-wiki",
-      "name": "LLM Wiki",
-      "path": "skills/llm-wiki.md",
-      "description": "Build and maintain personal knowledge bases using the Karpathy Wiki pattern."
+      "name": "llm-wiki-skill",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/cosen1024/llm-wiki-skill.git"
+      },
+      "description": "Build and maintain LLM-powered personal knowledge bases using the Karpathy Wiki pattern.",
+      "version": "1.0.0",
+      "strict": true
     }
   ]
 }

@@ -1,0 +1,13 @@
+{
+  "name": "llm-wiki-skill",
+  "version": "1.0.0",
+  "description": "Build and maintain LLM-powered personal knowledge bases using the Karpathy Wiki pattern.",
+  "author": {
+    "name": "cosen1024",
+    "url": "https://github.com/cosen1024"
+  },
+  "homepage": "https://github.com/cosen1024/llm-wiki-skill",
+  "repository": "https://github.com/cosen1024/llm-wiki-skill",
+  "license": "MIT",
+  "keywords": ["wiki", "knowledge-base", "research", "documentation", "notes", "karpathy"]
+}
