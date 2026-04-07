@@ -15,13 +15,13 @@
 
 本项目将这一顶级思维转化为 **AI 原生技能 (AI-Native Skill)**：
 - **大神理念**：摒弃复杂的向量数据库，让 LLM 像程序员维护代码库一样，持久化地维护你的 Markdown 维基。每一次摄取都是在织入知识，每一次查询都是在复利。
-- **AI 原生实现**：这不仅是一个软件，更是一份**“大脑指令集”**。无需 Node/Python 环境，直接利用 Claude Code/Accio 的原生文件操作能力，实现最轻量、最智能的知识管理。
+- **AI 原生实现**：这不仅是一个软件，更是一份**“大脑指令集”**。无需 Node/Python 环境，直接利用 Claude Code 的原生文件操作能力，实现最轻量、最智能的知识管理。
 
 > “Obsidian 是 IDE，LLM 是程序员，Wiki 则是代码库。”
 
 ## 📂 目录架构
 
-![LLM Wiki 架构图](https://images.javalearn.cn/blog/2026/04/ca4ced3ee79e5d70344731a61d1d7968.png)
+<img src="https://images.javalearn.cn/blog/2026/04/ca4ced3ee79e5d70344731a61d1d7968.png" width="50%" alt="LLM Wiki 架构图">
 
 ```text
 vault/
@@ -39,8 +39,6 @@ vault/
 
 ## 🛠️ 核心操作
 
-![LLM Wiki 工作流](https://images.javalearn.cn/blog/2026/04/3a9c6c9b036cd38b527dc4bf9ee87dbc.png)
-
 | 指令 (Trigger) | 功能描述 |
 |---|---|
 | `build wiki` | 初始化结构，并与 LLM 共同进化 `CLAUDE.md` 规范。 |
@@ -53,14 +51,18 @@ vault/
 你可以通过以下两种方式将此技能赋予你的 AI：
 
 ### 模式 A：插件安装 (推荐)
-适用于 Claude Code/Accio 用户，一键集成到你的指令集：
+适用于 Claude Code 用户，一键集成到你的指令集：
 ```bash
 /plugin marketplace add cosen1024/llm-wiki-skill
 /plugin install llm-wiki-skill@cosen1024/llm-wiki-skill
 ```
 
 ### 模式 B：技能加载 (手动)
-如果你不希望安装插件，可以手动克隆仓库，并让 AI 直接读取 `skills/llm-wiki.md` 的内容。
+如果你不希望安装插件，可以手动克隆仓库，并让 AI 直接读取 `skills/llm-wiki.md` 的内容：
+
+```bash
+git clone https://github.com/cosen1024/llm-wiki-skill.git
+```
 
 ---
 
@@ -72,7 +74,7 @@ Standard RAG is just a "temporary courier" — it fetches fragments when you ask
 
 This project transforms that high-level vision into an **AI-Native Skill**:
 - **The Vision**: Move away from complex vector databases. Let the LLM maintain a persistent, interlinked Markdown Wiki as if it were maintaining a codebase. Every ingestion is an integration; every query is a compounding interest.
-- **AI-Native Implementation**: This is not just software; it's an **"Instruction Set for the Brain."** It leverages the native file-op capabilities of Claude Code/Accio directly, making it the most lightweight and intelligent way to manage knowledge.
+- **AI-Native Implementation**: This is not just software; it's an **"Instruction Set for the Brain."** It leverages the native file-op capabilities of Claude Code directly, making it the most lightweight and intelligent way to manage knowledge.
 
 ## 📖 Usage Guide
 
