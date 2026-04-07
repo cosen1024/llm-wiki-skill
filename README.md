@@ -102,6 +102,36 @@ vault/
 | `wiki query` | Ask questions and generate "flowback" artifacts. |
 | `lint wiki` | Perform a health check: find gaps, contradictions, and orphans. |
 
+## 📦 安装 (Installation)
+
+```bash
+/plugin marketplace add cosen1024/llm-wiki-skill
+/plugin install llm-wiki-skill@cosen1024/llm-wiki-skill
+```
+
+## 📖 Usage Guide
+
+After installation, you don't need to memorize rigid commands. Just interact with the AI using **natural language**.
+
+### 1. Three-Step Quick Start
+1.  **Initialize**: Tell the AI, "Build a knowledge base for [Your Domain]." It will automatically create the `raw/`, `wiki/`, and `output/` directories.
+2.  **Feed Sources**: Drop your PDFs, articles, or notes into the `raw/` folder (or paste the content directly into the chat).
+3.  **Ingest Knowledge**: Tell the AI, "Ingest new materials" or "Process the contents in the raw folder." The AI will begin the "compilation" process.
+
+### 2. Example Prompts
+*   **Startup**: "Build a research wiki for 'Deep Learning Crack Detection'."
+*   **Ingest**: "Ingest the 3 new papers I just added to the raw folder and update the index."
+*   **Deep Query**: "Based on the wiki, compare Algorithm A vs. Algorithm B in a table format."
+*   **Maintenance**: "Lint my wiki to find contradictions or orphan concepts that lack links."
+
+### 3. The Magic: Flowback
+When you ask a great question and the AI provides a brilliant analysis report, simply say:
+> "File this analysis back into the wiki's comparisons directory."
+
+The AI will save it as a persistent Markdown page, allowing your knowledge base to compound with every conversation.
+
+---
+
 ## 🌟 Best Practices
 
 - **Flowback is magic**: Always file valuable query results back into the wiki.
